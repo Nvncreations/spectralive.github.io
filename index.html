@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spectra Live | Event Management</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #000; color: #fff; }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 60px;
+      background: rgba(0,0,0,0.85);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header img { height: 50px; }
+
+    nav a {
+      color: #fff;
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover { color: #ff7a18; }
+
+    .hero {
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('hero-placeholder.jpg') center/cover no-repeat;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      letter-spacing: 3px;
+      color: #ff7a18;
+    }
+
+    .hero p {
+      margin-top: 15px;
+      font-size: 1.2rem;
+      max-width: 700px;
+    }
+
+    section { padding: 80px 60px; }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      color: #ff7a18;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      background: #111;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .gallery-item img, .gallery-item video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .service-box {
+      background: #111;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .service-box h3 { color: #ff7a18; margin-bottom: 10px; }
+
+    .contact {
+      text-align: center;
+      background: #080808;
+      border-radius: 15px;
+      padding: 50px;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin: 15px;
+      padding: 12px 30px;
+      background: #ff7a18;
+      color: #000;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #050505;
+      font-size: 0.9rem;
+    }
+
+    @media(max-width: 768px) {
+      header { padding: 20px; }
+      section { padding: 60px 20px; }
+      .hero h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="spectra-live-logo.png" alt="Spectra Live Logo" />
+    <nav>
+      <a href="#about">About</a>
+      <a href="#events">Events</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div>
+      <h1>SPECTRA LIVE</h1>
+      <p>High-energy DJ nights • Corporate Events • Premium Event Experiences</p>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="section-title">
+      <h2>About Us</h2>
+    </div>
+    <p style="text-align:center; max-width:900px; margin:auto;">
+      Spectra Live is a professional event management company specializing in DJ parties, corporate events, and live entertainment experiences.
+    </p>
+  </section>
+
+  <section id="events">
+    <div class="section-title">
+      <h2>Event Gallery</h2>
+      <p>Add your images & videos anytime</p>
+    </div>
+    <div class="gallery">
+      <div class="gallery-item"><img src="dj-event-1.jpg" alt="DJ Event"></div>
+      <div class="gallery-item"><img src="corporate-event-1.jpg" alt="Corporate Event"></div>
+      <div class="gallery-item"><video src="dj-video.mp4" controls></video></div>
+      <div class="gallery-item"><img src="dj-event-2.jpg" alt="DJ Party"></div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="section-title">
+      <h2>Our Services</h2>
+    </div>
+    <div class="services">
+      <div class="service-box"><h3>DJ Parties</h3><p>Club nights, college fests, private parties</p></div>
+      <div class="service-box"><h3>Corporate Events</h3><p>Product launches, annual meets, conferences</p></div>
+      <div class="service-box"><h3>Sound & Lighting</h3><p>Professional audio, stage & lighting setups</p></div>
+      <div class="service-box"><h3>Event Production</h3><p>End-to-end event planning & execution</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-title">
+      <h2>Contact Us</h2>
+    </div>
+    <div class="contact">
+      <p>Let’s create unforgettable experiences together</p>
+      <a href="mailto:nvncreations2020@gmail.com">Email Us</a>
+      <a href="https://wa.me/918590894146" target="_blank">WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Spectra Live. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
