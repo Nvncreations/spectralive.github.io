@@ -112,14 +112,12 @@
       cursor: pointer;
     }
 
-    .event-card img,
-    .event-card video {
+    .event-card img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
 
-    /* POPUP OVERLAY */
     .event-overlay {
       position: absolute;
       inset: 0;
@@ -158,6 +156,63 @@
     .service-box h3 {
       color: #ff7a18;
       margin-bottom: 10px;
+    }
+
+    /* 🔥 UPDATES SECTION */
+    #updates {
+      background: linear-gradient(to bottom right, #050505, #0d0d0d);
+      padding: 90px 60px;
+    }
+
+    .updates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 35px;
+      width: 100%;
+      margin-top: 40px;
+    }
+
+    .update-card {
+      background: rgba(255, 122, 24, 0.08);
+      border: 1px solid rgba(255, 122, 24, 0.3);
+      padding: 30px 25px;
+      border-radius: 16px;
+      backdrop-filter: blur(6px);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: 0.35s ease;
+      transform: translateY(20px);
+      opacity: 0;
+      animation: fadeUp 0.8s forwards;
+    }
+
+    .update-card:nth-child(2) { animation-delay: .2s; }
+    .update-card:nth-child(3) { animation-delay: .4s; }
+
+    .update-card:hover {
+      transform: scale(1.06);
+      border-color: #ff7a18;
+      box-shadow: 0 0 20px rgba(255, 122, 24, 0.6);
+    }
+
+    .update-card h3 {
+      color: #ff7a18;
+      margin-bottom: 10px;
+    }
+
+    .update-card .icon {
+      font-size: 2.4rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* CONTACT */
@@ -208,6 +263,7 @@
     <a href="#about">About</a>
     <a href="#events">Events</a>
     <a href="#services">Services</a>
+    <a href="#updates">Updates</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -235,41 +291,18 @@
   </div>
 
   <div class="event-scroll">
-
     <div class="event-card">
       <img src="crpevent.jpg">
       <div class="event-overlay"><h3>Corporate Event</h3></div>
     </div>
-
     <div class="event-card">
       <img src="outevent.jpg">
-      <div class="event-overlay"><h3>Luxury Weddings</h3></div>
+      <div class="event-overlay"><h3>Luxury Weddings</hh3></div>
     </div>
-
     <div class="event-card">
       <img src="outeve1.jpg">
       <div class="event-overlay"><h3>Outdoor Weddings</h3></div>
     </div>
-
-    <div class="event-card">
-      <img src="dj-event-1.jpg">
-      <div class="event-overlay"><h3>DJ Party</h3></div>
-    </div>
-      <div class="event-card">
-      <img src="crpevent.jpg">
-      <div class="event-overlay"><h3>Corporate Event</h3></div>
-    </div>
-
-    <div class="event-card">
-      <img src="outevent.jpg">
-      <div class="event-overlay"><h3>Luxury Weddings</h3></div>
-    </div>
-
-    <div class="event-card">
-      <img src="outeve1.jpg">
-      <div class="event-overlay"><h3>Outdoor Weddings</h3></div>
-    </div>
-
     <div class="event-card">
       <img src="dj-event-1.jpg">
       <div class="event-overlay"><h3>DJ Party</h3></div>
@@ -298,6 +331,34 @@
     <div class="service-box">
       <h3>Event Production</h3>
       <p>End-to-end event execution</p>
+    </div>
+  </div>
+</section>
+
+<!-- 🔥 NEW MODERN UPDATES SECTION -->
+<section id="updates">
+  <div class="section-title">
+    <h2>Latest Updates</h2>
+    <p style="margin-top:10px; opacity:0.7;">Stay tuned for big announcements</p>
+  </div>
+
+  <div class="updates-grid">
+    <div class="update-card">
+      <span class="icon">🚀</span>
+      <h3>New Year Mega DJ Event</h3>
+      <p>Massive show lineup dropping soon! Don’t miss out.</p>
+    </div>
+
+    <div class="update-card">
+      <span class="icon">🎧</span>
+      <h3>Artist Collaboration</h3>
+      <p>Top DJs from India joining Spectra Live on tour.</p>
+    </div>
+
+    <div class="update-card">
+      <span class="icon">📅</span>
+      <h3>Bookings Open</h3>
+      <p>Weddings • Corporate Nights • Festivals • College Fests</p>
     </div>
   </div>
 </section>
